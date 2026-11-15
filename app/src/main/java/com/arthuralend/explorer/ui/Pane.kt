@@ -402,7 +402,7 @@ private fun HeaderCell(state: PaneState, mode: SortMode, label: String, modifier
     val cs = MaterialTheme.colorScheme
     Row(
         modifier
-            .clickable { state.setSort(mode) }
+            .clickable { state.changeSort(mode) }
             .padding(vertical = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = if (end) Arrangement.End else Arrangement.Start,

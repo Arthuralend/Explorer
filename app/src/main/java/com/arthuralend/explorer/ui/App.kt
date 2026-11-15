@@ -223,7 +223,7 @@ private fun CommandBar(vm: ExplorerViewModel) {
                                 trailing = if (p.sort == mode) {
                                     { Text(if (p.ascending) "↑" else "↓", color = cs.primary) }
                                 } else null,
-                            ) { act { p.setSort(mode) } }
+                            ) { act { p.changeSort(mode) } }
                         }
                         HorizontalDivider()
                         MenuItem(

@@ -124,7 +124,7 @@ class PaneState(
         open(if (isRoot || parent == null || !parent.canRead()) null else parent)
     }
 
-    fun setSort(mode: SortMode) {
+    fun changeSort(mode: SortMode) {
         if (sort == mode) {
             ascending = !ascending
         } else {
