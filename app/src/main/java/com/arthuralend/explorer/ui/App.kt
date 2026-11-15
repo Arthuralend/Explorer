@@ -243,12 +243,11 @@ private fun CommandBar(vm: ExplorerViewModel) {
     }
 }
 
-private fun checkMark(on: Boolean): (@Composable () -> Unit)? {
-    if (!on) return null
-    return @Composable {
-        Icon(Icons.Filled.Check, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
-    }
+private val CheckIcon: @Composable () -> Unit = {
+    Icon(Icons.Filled.Check, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
 }
+
+private fun checkMark(on: Boolean): (@Composable () -> Unit)? = if (on) CheckIcon else null
 
 @Composable
 private fun CmdButton(
